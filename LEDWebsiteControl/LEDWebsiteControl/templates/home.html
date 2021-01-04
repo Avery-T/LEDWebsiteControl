@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+
+
+
+<h1 class ="googleGrey"> LED Brightness</h1>
+<div>
+  <link rel="stylesheet" href="{{url_for ('static', filename='styles.css')}}">
+  <div class="slidecontainer"> 
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    
+   </div>  
+ </link>  
+
+<div> 
+  
+ <button id ="colorC" > Change Color </button> 
+ 
+
+</div>
+ 
+<script src= "{{url_for('static',filename='js/main.js')}}"> </script>  
+</div>
+
+{% endblock %}
+
+{% block body %}
+
+{% endblock %}
+
+
