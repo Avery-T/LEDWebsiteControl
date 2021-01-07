@@ -29,6 +29,16 @@ To insure that everything works correctly isntall on a Raspberry Pi, but the gui
 - cd /var/www/LEDWebsiteControl/LEDWEbsiteControl
 - export FLASK_APP=__init__ && flask run -h "your ip here" 
 - If you can access the website in your brosswer and controll your LEDs then procceed 
-#### 
+#### Setup the code to run on the Apache server
+- mv /var/www/LEDWebsiteControl/LEDWebsiteControl.conf /etc/apache2/sites-available/
+- sudo a2ensite LEDWebsiteControl 
+- use a text edditor to change the secrete key of LEDWebsiteControl.conf
+- sudo vim /etc/apache2/envvars
+- make APACHE_RUN_USER and APACHE_RUN_GROUP = your user name
+-- mine looks like APACHE_RUN_USER=pi APACHE_RUN_GROUP=pi
+- sudo service apache2 restart
+## The code should be running on the Apache server now. If its not working view the Apache log by runing:
+- tail /var/log/apache2/error.log
+
 
 
