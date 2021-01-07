@@ -37,7 +37,7 @@ To insure that everything works correctly isntall on a Raspberry Pi, but the gui
 - make APACHE_RUN_USER and APACHE_RUN_GROUP = your user name
 -- mine looks like APACHE_RUN_USER=pi APACHE_RUN_GROUP=pi
 - sudo service apache2 restart
-## The code should be running on the Apache server now. If its not working view the Apache log by runing:
+#### The code should be running on the Apache server now. If its not working view the Apache log by runing:
 - tail /var/log/apache2/error.log
 
 
